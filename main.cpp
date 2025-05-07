@@ -35,7 +35,7 @@ class Manga {
            if(pManga > 0) 
                 num_pag = pManga;
             else 
-                cout << "O numero de paginas tem que ser um numero positivo" ;   
+                cout << "O numero de paginas tem que ser um numero positivo" << endl ;   
         } 
 
          // Get
@@ -47,6 +47,9 @@ class Manga {
         } 
         int getPagManga() {
           return num_pag; 
+        }
+        ~Manga() {
+            cout << "Destrutor chamado" << endl;
         }
 };
 
@@ -71,12 +74,12 @@ while(true) {
     m1.setPagManga(numPag);
     break;
    }
-   cout << "Por favor, insira um número de páginas válido.\n";
+   cout << "Por favor, insira um número de paginas válido.\n";
 }
 
    m1.setAutorManga(autor);
    m1.setTituloManga(title);
    m1.setPagManga(numPag);
 
-   cout << "O mangá " << m1.getTituloManga() << " de "  << m1.getAutorManga() << " possui " << m1.getPagManga() << " páginas, sendo " << (m1.mangaLongo() ? "Longo" : "NAO LONGO");
+   cout << "O manga " << m1.getTituloManga() << " de "  << m1.getAutorManga() << " possui " << m1.getPagManga() << " páginas, sendo " << (m1.mangaLongo() ? "LONGO" : "NAO LONGO") ;
 }
